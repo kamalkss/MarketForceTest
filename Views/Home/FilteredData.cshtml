@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "FilteredData";
+}
+
+<h1>FilteredData</h1>
+
+<form method="POST">
+    <div style="display: flex">
+        <div style="flex: 1; margin-right: 20px">
+             @Html.DropDownList("program",ViewBag.possibleFilterList,"","")
+        </div>
+        <div style="flex: 1">
+            @Html.DropDownList("scheme",ViewBag.Schemelist,"","")
+
+        </div>
+    </div>
+    <div>
+        <td>
+            <input id="Submit1" type="submit" value="search" />
+        </td>
+    </div>
+    <div>
+       @Html.TextArea("Textbox",ViewBag.PrettyJson,10,100,"");
+    </div>
+</form>
+

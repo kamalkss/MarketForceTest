@@ -1,0 +1,15 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "View report names";
+}
+<h1>Viewreportnames</h1>
+@{
+    var data = ViewBag.Json;
+    for (int i = 0; i < data.data.Count; i++)
+    {
+        <p>@data["data"][i]["linkName"].ToString()</p>
+        <p>@data["data"][i]["Description"].ToString()</p><br />
+    }
+}
+
